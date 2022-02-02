@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #check-mark {
+        stroke-dasharray: 288.17;
+        stroke-dashoffset: 288.17;
+        animation: draw2 0.5s ease-in;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes draw2 {
+        to {
+          stroke-dasharray: 288.17;
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xml:space="preserve"
+      width="1920px"
+      height="1080px"
+      version="1.1"
+      shape-rendering="geometricPrecision"
+      text-rendering="geometricPrecision"
+      image-rendering="optimizeQuality"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      viewBox="0 0 1920 1080"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <rect id="background" fill="#405889" width="1920" height="1080" />
+      <g id="all">
+        <g id="envelope-body">
+          <rect
+            fill="#CAE2E6"
+            x="758.11"
+            y="473.63"
+            width="403.65"
+            height="243.18"
+            rx="7.8"
+            ry="7"
+          />
+          <path
+            id="cover-top"
+            fill="#CAE2E6"
+            fill-rule="nonzero"
+            d="M1154.99 473.64l-190.75 -146.97c-2.55,-1.96 -5.99,-1.96 -8.54,0l-190.82 146.97 390.11 0z"
+          />
+          <g id="paper-group">
+            <polygon
+              id="paper"
+              fill="white"
+              fill-rule="nonzero"
+              points="1124.73,716.81 795.14,716.81 795.14,473.64 1124.73,473.64 "
+            />
+            <path
+              id="check-mark"
+              fill="none"
+              stroke="#11BF1D"
+              stroke-width="30"
+              stroke-linejoin="bevel"
+              d="M874.82 583.36c20.1,21.82 36.3,49.87 50.87,78.86 36.23,-49.49 80.03,-101.07 133.4,-139.61"
+            />
+          </g>
+          <path
+            fill="#D9F6FB"
+            d="M955.54 596.39l-150.48 -121.21c-1.29,-1.04 -2.72,-1.54 -4.39,-1.54l-35.56 0c-3.85,0 -7,3.14 -7,6.99l0 229.18c0,3.85 3.15,7 7,7l389.65 0c3.85,0 7,-3.15 7,-7l0 -229.18c0,-3.85 -3.15,-6.99 -7,-6.99l-35.52 0c-1.66,0 -3.09,0.5 -4.38,1.54l-150.54 121.21c-2.59,2.08 -6.19,2.08 -8.78,0z"
+          />
+          <path
+            fill="#D9F6FB"
+            fill-rule="nonzero"
+            d="M1154.99 716.81l-190.75 -146.96c-2.55,-1.97 -5.99,-1.97 -8.54,0l-190.82 146.96 390.11 0z"
+          />
+          <path
+            fill="#AEC5C9"
+            fill-rule="nonzero"
+            d="M1154.99 716.81l-190.75 -151.25c-2.55,-2.02 -5.99,-2.02 -8.54,0l-190.82 151.25 390.11 0z"
+          />
+          <path
+            fill="#EDFFFF"
+            fill-rule="nonzero"
+            d="M1154.99 716.81l-190.75 -146.96c-2.55,-1.97 -5.99,-1.97 -8.54,0l-190.82 146.96 390.11 0z"
+          />
+          <path
+            fill="#D9F6FB"
+            fill-rule="nonzero"
+            d="M1154.99 716.81l-190.75 -143.13c-2.55,-1.92 -5.99,-1.92 -8.54,0l-190.82 143.13 390.11 0z"
+          />
+        </g>
+        <g id="cover-bottom">
+          <path
+            fill="#AEC5C9"
+            fill-rule="nonzero"
+            d="M1154.99 473.64l-190.75 149.65c-2.55,2 -5.99,2 -8.54,0l-190.82 -149.65 390.11 0z"
+          />
+          <path
+            fill="#EDFFFF"
+            fill-rule="nonzero"
+            d="M1154.99 473.64l-190.75 146.06c-2.55,1.95 -5.99,1.95 -8.54,0l-190.82 -146.06 390.11 0z"
+          />
+          <path
+            fill="#D9F6FB"
+            fill-rule="nonzero"
+            d="M1154.99 473.64l-190.75 143c-2.55,1.92 -5.99,1.92 -8.54,0l-190.82 -143 390.11 0z"
+          />
+        </g>
+      </g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/MotionPathPlugin.min.js"></script>
+    <script>
+      gsap.set("#all", { transformOrigin: "50% 80%", opacity: 0 });
+      gsap.set("#cover-top", { transformOrigin: "50% 100%", scaleY: 0 });
+      gsap.set("#pen", { transformOrigin: "0% 100%" });
+
+      gsap.from("#all", { duration: 0.5, x: -500, y: -20, scale: 0 });
+      gsap.to("#all", { duration: 0.2, opacity: 1 });
+
+      let tl3 = gsap.timeline();
+      tl3
+        .to("#all", { duration: 0.1, rotation: -20, ease: "sine.inOut" })
+        .to("#all", { duration: 0.2, rotation: 5, ease: "sine.inOut" })
+        .to("#all", { duration: 0.7, rotation: 0, ease: "sine.out" });
+
+      gsap.to("#pen", { duration: 0.5, rotation: -15 });
+
+      let tl1 = gsap.timeline();
+      tl1
+        .to("#cover-bottom", { duration: 0.4, scaleY: 0, ease: "none" })
+        .set("#cover-top", { visibility: "visible" })
+        .to("#cover-top", {
+          duration: 0.3,
+          delay: -0.04,
+          scaleY: 1,
+          ease: "expo.out",
+        })
+        .to("#paper-group", {
+          delay: -0.3,
+          duration: 1,
+          y: -235,
+          ease: "back.out(1.7)",
+        });
+
+      /*gsap.to("#paper-group", { delay: .6, duration: 1, y: -235, ease: "back.out(1.7)" });*/
+      /*so, delayInTimeline = delayOutTimeline - previousUndelayedDurations*/
+
+      gsap.to("#pen", {
+        motionPath: {
+          path: "#pen-path",
+          align: "#pen-path",
+          alignOrigin: [0, 1],
+          autoRotate: false,
+        },
+        duration: 3.5,
+        ease: "slow(.7, .7, false)",
+      });
+
+      let tl2 = gsap.timeline();
+      tl2
+        .to("#paper-group", {
+          duration: 0.4,
+          delay: 1.8,
+          y: 0,
+          ease: "back.in(1.7)",
+        })
+        .to("#cover-top", {
+          duration: 0.4,
+          delay: -0.2,
+          scaleY: 0,
+          ease: "none",
+        })
+        .to("#cover-bottom", {
+          duration: 0.3,
+          delay: -0.04,
+          scaleY: 1,
+          ease: "expo.out",
+        })
+        .to("#all", {
+          duration: 1.6,
+          delay: -0.5,
+          scale: 0.95,
+          ease: "expo.out",
+        });
+    </script>
+  </body>
+</html>
